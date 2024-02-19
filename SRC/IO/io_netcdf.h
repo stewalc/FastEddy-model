@@ -13,7 +13,11 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
+#ifndef _IO_NETCDF_H
+#define _IO_NETCDF_H
 #include <netcdf.h>
+#include <io.h>
+#include <ioVarsList.h>
 
 /* Handle errors by printing an error message and exiting with a
  * non-zero status. */
@@ -86,3 +90,4 @@ int ioPutNetCDFoutFileVars(int ncid, int Nx, int Ny, int Nz, int Nh);
 */
 int ioCloseNetCDFfile(int ncid);
 
+#endif // _IO_NETCDF_H

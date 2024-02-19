@@ -13,7 +13,8 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-#include <io.h>
+#include <io_netcdf.h>
+
 
 #define MAXLEN 256
 int dimids[MAXDIMS];
