@@ -16,6 +16,8 @@
 #ifndef _MOLDIFF_CUDADEV_CU_H
 #define _MOLDIFF_CUDADEV_CU_H
 #include <hydro_core.h>
+#include <fempi.h>
+#include <cuda_gridDevice_cu.h>
 /*moldiff_ return codes */
 #define CUDA_MOLDIFF_SUCCESS               0
 
