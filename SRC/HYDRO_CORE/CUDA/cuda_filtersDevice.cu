@@ -13,6 +13,7 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
+#include <cuda_filtersDevice_cu.h>
 /*---EXPLICIT FILTERS*/ 
 __constant__ int filterSelector_d;     /* explicit filter selector: 0=off, 1=on */
 __constant__ float filter_6th_coeff_d; /* 6th-order filter factor: 0.0=off, 1.0=full */
