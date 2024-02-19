@@ -14,12 +14,12 @@
 * limitations under the License.
 */
 #include <cuda_coriolisDevice_cu.h>
-#include <hydro_core.h>
+
 /*---CORIOLIS*/ 
-__constant__ int coriolisSelector_d;          /*coriolis Force selector: 0=off, 1=on*/
-__constant__ float corioConstHorz_d;          /*coriolis horizontal term constant */
-__constant__ float corioConstVert_d;          /*coriolis vertical term constant */
-__constant__ float corioLS_fact_d;            /*large-scale forcing factor on Coriolis term*/
+// __constant__ int coriolisSelector_d;          /*coriolis Force selector: 0=off, 1=on*/
+// __constant__ float corioConstHorz_d;          /*coriolis horizontal term constant */
+// __constant__ float corioConstVert_d;          /*coriolis vertical term constant */
+// __constant__ float corioLS_fact_d;            /*large-scale forcing factor on Coriolis term*/
 
 
 /*#################------------ CORIOLIS submodule function definitions ------------------#############*/

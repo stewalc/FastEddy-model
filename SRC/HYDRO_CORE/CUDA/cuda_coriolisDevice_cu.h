@@ -15,7 +15,7 @@
 */
 #ifndef _CORIOLIS_CUDADEV_CU_H
 #define _CORIOLIS_CUDADEV_CU_H
-
+#include <hydro_core.h>
 /*coriolis return codes */
 #define CUDA_CORIOLIS_SUCCESS    0
 
