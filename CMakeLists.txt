@@ -24,7 +24,7 @@ add_compile_options(
   -Wall 
   -m64
 #   -arch=sm_70
-#   -std=c++11
+  -std=c++11
 )
 include_directories(SYSTEM ${MPI_INCLUDE_PATH})
 
