@@ -9,7 +9,7 @@ project(FastEddy
 
 find_package(CUDA REQUIRED)
 find_package(CUDAToolkit REQUIRED)
-find_package(OpenMP REQUIRED)
+find_package(MPI REQUIRED)
 # find_package(NetCDF REQUIRED)
 
 set( CC mpicc )
@@ -17,6 +17,7 @@ set( CC mpicc )
 add_definitions(
     -DCUB_IGNORE_DEPRECATED_CPP_DIALECT 
     -DTHRUST_IGNORE_DEPRECATED_CPP_DIALECT
+    -DOMPI_SKIP_MPICXX
 )
 
 add_compile_options(
@@ -113,3 +114,4 @@ add_executable(
 target_link_libraries( FastEddy io )
 target_link_libraries( FastEddy fecuda_Device )
 target_link_libraries( FastEddy cuda_hydroCoreDevice )
+target_link_libraries( FastEddy MPI_C )
