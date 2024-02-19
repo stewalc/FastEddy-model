@@ -13,6 +13,7 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
+#include <cuda_advectionDevice_cu.h>
 /*---ADVECTION*/ 
 float *hydroFaceVels_d; //cell face velocities
 __constant__ int advectionSelector_d;          /*advection scheme selector: 0= 1st-order upwind, 2= 3rd-order QUICK, 2= hybrid 3rd-4th order, 3= hybrid 5th-6th order */
