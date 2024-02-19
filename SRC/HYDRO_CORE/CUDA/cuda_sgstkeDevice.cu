@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 //#define DEBUG_TKE //for verbose logging of exemplar (imin,jmin) profiles 
-
+#include <cuda_sgstkeDevice_cu.h>
 /*Advection selectors 1 or 2-eq TKE */
 __constant__ int TKEAdvSelector_d;     /* SGSTKE advection scheme selector */
 __constant__ float TKEAdvSelector_b_hyb_d; /* hybrid advection scheme selector */

@@ -15,7 +15,12 @@
 */
 #ifndef _SGSTKE_CUDADEV_CU_H
 #define _SGSTKE_CUDADEV_CU_H
-
+#include <hydro_core.h>
+#include <fempi.h>
+#include <grid.h>
+#include <cuda_gridDevice_cu.h>
+#include <cuda_hydroCoreDevice_cu.h>
+#include <fecuda_Utils_cu.h>
 /*sgstke_ return codes */
 #define CUDA_SGSTKE_SUCCESS    0
 
