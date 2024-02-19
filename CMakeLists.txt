@@ -26,9 +26,9 @@ add_compile_options(
 #   -arch=sm_70
   -std=c++11
 )
+include_directories(SYSTEM ${MPI_INCLUDE_PATH})
 
 include_directories(
-    MPI_C_INCLUDE_DIRS
     SRC/FEMAIN
     SRC/TIME_INTEGRATION
     SRC/TIME_INTEGRATION/CUDA
@@ -115,4 +115,4 @@ add_executable(
 target_link_libraries( FastEddy io )
 target_link_libraries( FastEddy fecuda_Device )
 target_link_libraries( FastEddy cuda_hydroCoreDevice )
-target_link_libraries( FastEddy MPI_C )
+target_link_libraries( FastEddy ${MPI_C_LIBRARIES} )
