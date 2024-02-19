@@ -10,7 +10,7 @@ project(FastEddy
 find_package(CUDA REQUIRED)
 find_package(CUDAToolkit REQUIRED)
 find_package(OpenMP REQUIRED)
-find_package(NetCDF REQUIRED)
+# find_package(NetCDF REQUIRED)
 
 set( CC mpicc )
 
