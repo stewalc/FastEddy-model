@@ -15,7 +15,12 @@
 */
 #ifndef _LSF_CUDADEV_CU_H
 #define _LSF_CUDADEV_CU_H
-
+#include <hydro_core.h>
+#include <fempi.h>
+#include <grid.h>
+#include <cuda_gridDevice_cu.h>
+#include <cuda_hydroCoreDevice_cu.h>
+#include <fecuda_Utils_cu.h>
 /*LSF_ return codes */
 #define CUDA_LSF_SUCCESS    0
 
