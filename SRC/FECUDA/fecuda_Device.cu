@@ -15,8 +15,10 @@
 */
 
 //INCLUDED SOURCE FILES
-#include "fecuda_Utils.cu"
-#include "fecuda_PlugIns.cu"
+// #include "fecuda_Utils.cu"
+// #include "fecuda_PlugIns.cu"
+
+#include <fecuda_Device_cu.h>
 
 /*############------------------- FECUDA module internal function declarations ---------------------#############*/
 dim3 tBlock; //Module Global configuration parameter for threadBlocks
