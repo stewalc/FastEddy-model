@@ -13,6 +13,10 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
+#ifndef _IO_BINARY_H
+#define _IO_BINARY_H
+
+#include <stdio.h>
 //////////***********************  INPUT FUNCTIONS  *********************************////////
 
 //////////***********************  OUTPUT FUNCTIONS  *********************************////////
@@ -25,3 +29,4 @@ int ioWriteBinaryoutFileSingleTime(int tstep, int Nx, int Ny, int Nz, int Nh);
 */
 int ioPutBinaryoutFileVars(FILE *outptr, int Nx, int Ny, int Nz, int Nh);
 
+#endif // _IO_BINARY_H

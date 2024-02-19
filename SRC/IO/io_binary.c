@@ -14,7 +14,6 @@
 * limitations under the License.
 */
 
-#include <stdio.h>
 #include <io_binary.h>
 
 /*----->>>>> int ioWriteBinaryoutFileSingleTime();  ---------------------------------------------------------------
