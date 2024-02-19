@@ -17,15 +17,6 @@
 #include <io.h>
 
 
-#define MAXLEN 256
-int dimids[MAXDIMS];
-size_t count[MAXDIMS];
-size_t start[MAXDIMS];
-size_t count2d[MAXDIMS];
-size_t start2d[MAXDIMS];
-size_t count2dTD[MAXDIMS];
-size_t start2dTD[MAXDIMS];
-
 /*######################------------------- IO module variable definitions ---------------------#################*/
 /* Parameters */
 int ioOutputMode;  /*0: N-to-1 gather and write to a netcdf file, 1:N-to-N writes of FastEddy binary files*/

@@ -15,16 +15,6 @@
 */
 #include <io_netcdf.h>
 
-
-#define MAXLEN 256
-int dimids[MAXDIMS];
-size_t count[MAXDIMS];
-size_t start[MAXDIMS];
-size_t count2d[MAXDIMS];
-size_t start2d[MAXDIMS];
-size_t count2dTD[MAXDIMS];
-size_t start2dTD[MAXDIMS];
-
 int dims4d[] = {0,1,2,3};
 int dims3d[] = {1,2,3};  
 int dims2dTD[] = {0,2,3};  
