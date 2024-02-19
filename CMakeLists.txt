@@ -58,8 +58,8 @@ add_library(
     fecuda_Device
     OBJECT
     SRC/FECUDA/fecuda_Device.cu
-	SRC/FECUDA/fecuda_Utils.cu
-	SRC/FECUDA/fecuda_PlugIns.cu
+	# SRC/FECUDA/fecuda_Utils.cu
+	# SRC/FECUDA/fecuda_PlugIns.cu
 )
 target_compile_features( fecuda_Device PUBLIC cxx_std_11 )
 set_target_properties( fecuda_Device PROPERTIES CUDA_SEPARABLE_COMPILATION ON )
