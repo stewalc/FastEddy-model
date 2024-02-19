@@ -13,6 +13,7 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
+#include <cuda_rayleighDampingDevice_cu.h>
 /*---RAYLEIGH DAMPING LAYER*/
 __constant__ int dampingLayerSelector_d;       // Rayleigh Damping Layer selector
 __constant__ float dampingLayerDepth_d;       // Rayleigh Damping Layer Depth

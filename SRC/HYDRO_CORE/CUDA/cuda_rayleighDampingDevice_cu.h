@@ -15,7 +15,7 @@
 */
 #ifndef _RAYLEIGHDAMPING_CUDADEV_CU_H
 #define _RAYLEIGHDAMPING_CUDADEV_CU_H
-
+#include <hydro_core.h>
 /*rayleighDamping return codes */
 #define CUDA_RAYLEIGHDAMPING_SUCCESS    0
 
