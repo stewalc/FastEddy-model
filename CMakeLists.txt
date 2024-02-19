@@ -27,6 +27,7 @@ add_compile_options(
   -std=c++11
 )
 include_directories(SYSTEM ${MPI_INCLUDE_PATH})
+include_directories(SYSTEM ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES})
 
 include_directories(
     SRC/FEMAIN
