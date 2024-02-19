@@ -30,6 +30,9 @@
 extern __constant__ int pgfSelector_d;        /*Pressure Gradient Force (pgf) selector: 0=off, 1=on*/
 extern float *hydroPres_d;            /*Base Adress of memory containing the diagnostic perturbation pressure field */
 
+extern "C" int cuda_pressureDeviceSetup();
+extern "C" int cuda_pressureDeviceCleanup();
+
 /*##############-------------- PRESSURE_CUDADEV submodule function declarations ------------------############*/
 
 /*----->>>>> __device__ void  cudaDevice_calcPerturbationPressure();  -----------------------------------------------

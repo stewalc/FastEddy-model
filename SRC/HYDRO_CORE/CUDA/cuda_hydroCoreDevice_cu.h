@@ -28,6 +28,20 @@
 #include <hydro_core.h>
 #include <fecuda_Device_cu.h>
 #include <cuda_gridDevice_cu.h>
+#include <cuda_BaseStateDevice_cu.h>
+#include <cuda_buoyancyDevice_cu.h>
+#include <cuda_coriolisDevice_cu.h>
+#include <cuda_pressureDevice_cu.h>
+#include <cuda_BCsDevice_cu.h>
+#include <cuda_rayleighDampingDevice_cu.h>
+#include <cuda_sgsTurbDevice_cu.h>
+#include <cuda_molecularDiffDevice_cu.h>
+#include <cuda_advectionDevice_cu.h>
+#include <cuda_surfaceLayerDevice_cu.h>
+#include <cuda_sgstkeDevice_cu.h>
+#include <cuda_largeScaleForcingsDevice_cu.h>
+#include <cuda_moistureDevice_cu.h>
+#include <cuda_filtersDevice_cu.h>
 /*hydroCore_ return codes */
 #define CUDA_HYDRO_CORE_SUCCESS               0
 
@@ -42,47 +56,7 @@ extern float *hydroFldsFrhs_d; //Base Adress of memory containing variable field
 extern float *hydroRhoInv_d;   //storage for 1.0/rho
 
 /*HYDRO_CORE Submodule parameters*/
-/*---BASESTATE*/
-#include <cuda_BaseStateDevice_cu.h>
 
-/*---BUOYANCY TERM*/
-#include <cuda_buoyancyDevice_cu.h>
-
-/*---CORIOLIS TERMS*/
-#include <cuda_coriolisDevice_cu.h>
-
-/*---PRESSURE_GRADIENT_FORCE*/
-#include <cuda_pressureDevice_cu.h>
-
-/*---BCS*/
-#include <cuda_BCsDevice_cu.h>
-
-/*---RAYLEIGHDAMPING TERM*/
-#include <cuda_rayleighDampingDevice_cu.h>
-
-/*---TURBULENCE*/
-#include <cuda_sgsTurbDevice_cu.h>
-
-/*---DIFFUSION*/
-#include <cuda_molecularDiffDevice_cu.h>
-
-/*---ADVECTION*/
-#include <cuda_advectionDevice_cu.h>
-
-/*---SURFACE LAYER*/
-#include <cuda_surfaceLayerDevice_cu.h>
-
-/*---SGSTKE */
-#include <cuda_sgstkeDevice_cu.h>
-
-/*---LARGE SCALE FORCINGS */
-#include <cuda_largeScaleForcingsDevice_cu.h>
-
-/*---MOISTURE */
-#include <cuda_moistureDevice_cu.h>
-
-/*EXPLICIT FILTERS */
-#include <cuda_filtersDevice_cu.h>
 
 /*Switch for Last-RK stage physics */
 extern __constant__ int physics_oneRKonly_d; /* selector to apply physics RHS forcing only at the latest RK stage: 0= off, 1= on */

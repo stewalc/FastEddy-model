@@ -29,12 +29,14 @@
 extern __constant__ int moistureSelector_d;     /* moisture selector: 0=off, 1=on */
 extern __constant__ int moistureNvars_d;        /* number of moisture species */
 extern __constant__ int moistureAdvSelectorQv_d;  /* water vapor advection scheme selector */
+extern __constant__ float moistureAdvSelectorQv_b_d; /* hybrid advection scheme parameter */
 extern __constant__ float moistureAdvSelectorQv_b_hyb_d; /*hybrid advection scheme parameter */
 extern __constant__ int moistureSGSturb_d;      /* selector to apply sub-grid scale diffusion to moisture fields */
 extern __constant__ int moistureCond_d;         /* selector to apply condensation to mositure fields */
 extern __constant__ int moistureAdvSelectorQi_d;  /* moisture advection scheme selector for non-qv fields (non-oscillatory schemes) */
 extern __constant__ float moistureCondTscale_d; /* relaxation time in seconds */
 extern __constant__ int moistureCondBasePressure_d;  /* selector to use base pressure for microphysics */
+extern __constant__ int moistureCondBasePres_d;  /* selector to use base pressure for microphysics */
 extern __constant__ float moistureMPcallTscale_d;  /* time scale for microphysics to be called */
 extern float* moistScalars_d;                   /*Base Address of memory containing moisture fields */
 extern float* moistScalarsFrhs_d;               /*Base Address of memory containing RHS forcing to moisture fields */

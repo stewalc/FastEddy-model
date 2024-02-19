@@ -35,30 +35,30 @@
 
 /*#################------------- CUDA_HYDRO_CORE module variable definitions ------------------#############*/
 /*Parameters*/
-__constant__ int Nhydro_d;       // Number of hydro_core prognostic variable fields
+// __constant__ int Nhydro_d;       // Number of hydro_core prognostic variable fields
 
 /* array fields */
-float *hydroFlds_d;     //Base Adress of memory containing all prognostic variable fields under hydro_core
-float *hydroFldsFrhs_d; //Base Adress of memory containing variable field Frhs(s) under hydro_core
-float *hydroRhoInv_d;   //storage for 1.0/rho
+// float *hydroFlds_d;     //Base Adress of memory containing all prognostic variable fields under hydro_core
+// float *hydroFldsFrhs_d; //Base Adress of memory containing variable field Frhs(s) under hydro_core
+// float *hydroRhoInv_d;   //storage for 1.0/rho
 
 /*HYDRO_CORE Submodule parameters*/
 
-__constant__ int physics_oneRKonly_d; /*selector to apply physics RHS forcing only at the latest RK stage: 0= off, 1= on*/
+// __constant__ int physics_oneRKonly_d; /*selector to apply physics RHS forcing only at the latest RK stage: 0= off, 1= on*/
 
 /*Constants*/
-__constant__ float R_gas_d;                 /* The ideal gas constant in J/(mol*K) */
-__constant__ float R_vapor_d;               /* The ideal gas constant for water vapor in J/(mol*K) */
-__constant__ float Rv_Rg_d;    /* Ratio R_vapor/R_gas */
-__constant__ float cp_gas_d;                /* Specific heat of air at constant pressure */
-__constant__ float cv_gas_d;                /* Specific heat of air at constant pressure */
-__constant__ float accel_g_d;           /* Acceleration of gravity 9.8 m/(s^2) */
-__constant__ float R_cp_d;    /* Ratio R/cp */
-__constant__ float cp_R_d;    /* Ratio cp/R */
-__constant__ float cp_cv_d;   /* Ratio cp/cv */
-__constant__ float refPressure_d;   /* Reference pressure set constant to 1e5 Pascals or 1000 millibars */
-__constant__ float kappa_d;          /*von Karman constant*/
-__constant__ float L_v_d;            /* latent heat of vaporization (J/kg) */
+// __constant__ float R_gas_d;                 /* The ideal gas constant in J/(mol*K) */
+// __constant__ float R_vapor_d;               /* The ideal gas constant for water vapor in J/(mol*K) */
+// __constant__ float Rv_Rg_d;    /* Ratio R_vapor/R_gas */
+// __constant__ float cp_gas_d;                /* Specific heat of air at constant pressure */
+// __constant__ float cv_gas_d;                /* Specific heat of air at constant pressure */
+// __constant__ float accel_g_d;           /* Acceleration of gravity 9.8 m/(s^2) */
+// __constant__ float R_cp_d;    /* Ratio R/cp */
+// __constant__ float cp_R_d;    /* Ratio cp/R */
+// __constant__ float cp_cv_d;   /* Ratio cp/cv */
+// __constant__ float refPressure_d;   /* Reference pressure set constant to 1e5 Pascals or 1000 millibars */
+// __constant__ float kappa_d;          /*von Karman constant*/
+// __constant__ float L_v_d;            /* latent heat of vaporization (J/kg) */
 
 
 /*#################------------ CUDA_HYDRO_CORE modune function definitions ------------------#############*/

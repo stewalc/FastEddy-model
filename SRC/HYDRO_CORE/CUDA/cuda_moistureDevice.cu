@@ -15,20 +15,20 @@
 */
 #include <cuda_moistureDevice_cu.h>
 /*---MOISTURE*/ 
-__constant__ int moistureSelector_d;     /* moisture selector: 0=off, 1=on */
-__constant__ int moistureNvars_d;        /* number of moisture species */
-__constant__ int moistureAdvSelectorQv_d;  /* water vapor advection scheme selector */
-__constant__ float moistureAdvSelectorQv_b_d; /* hybrid advection scheme parameter */
-__constant__ int moistureSGSturb_d;      /* selector to apply sub-grid scale diffusion to moisture fields */
-__constant__ int moistureCond_d;         /* selector to apply condensation to mositure fields */
-__constant__ int moistureAdvSelectorQi_d;  /* moisture advection scheme selector for non-qv fields (non-oscillatory schemes) */
-__constant__ float moistureCondTscale_d; /* relaxation time in seconds */
-__constant__ int moistureCondBasePres_d;  /* selector to use base pressure for microphysics */
-__constant__ float moistureMPcallTscale_d;  /* time scale for microphysics to be called */
-float* moistScalars_d;                   /*Base address for moisture field arrays*/
-float* moistScalarsFrhs_d;               /*Base address for moisture forcing field arrays*/
-float* moistTauFlds_d;                   /*Base address for moisture SGS field arrays*/
-float* fcond_d;                          /*Base address for f_cond array*/
+// __constant__ int moistureSelector_d;     /* moisture selector: 0=off, 1=on */
+// __constant__ int moistureNvars_d;        /* number of moisture species */
+// __constant__ int moistureAdvSelectorQv_d;  /* water vapor advection scheme selector */
+// __constant__ float moistureAdvSelectorQv_b_d; /* hybrid advection scheme parameter */
+// __constant__ int moistureSGSturb_d;      /* selector to apply sub-grid scale diffusion to moisture fields */
+// __constant__ int moistureCond_d;         /* selector to apply condensation to mositure fields */
+// __constant__ int moistureAdvSelectorQi_d;  /* moisture advection scheme selector for non-qv fields (non-oscillatory schemes) */
+// __constant__ float moistureCondTscale_d; /* relaxation time in seconds */
+// __constant__ int moistureCondBasePres_d;  /* selector to use base pressure for microphysics */
+// __constant__ float moistureMPcallTscale_d;  /* time scale for microphysics to be called */
+// float* moistScalars_d;                   /*Base address for moisture field arrays*/
+// float* moistScalarsFrhs_d;               /*Base address for moisture forcing field arrays*/
+// float* moistTauFlds_d;                   /*Base address for moisture SGS field arrays*/
+// float* fcond_d;                          /*Base address for f_cond array*/
 
 /*#################------------ MOISTURE submodule function definitions ------------------#############*/
 /*----->>>>> int cuda_moistureDeviceSetup();       ---------------------------------------------------------
