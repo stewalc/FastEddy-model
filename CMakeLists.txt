@@ -28,6 +28,7 @@ add_compile_options(
 )
 
 include_directories(
+    MPI_CXX_INCLUDE_DIRS
     SRC/FEMAIN
     SRC/TIME_INTEGRATION
     SRC/TIME_INTEGRATION/CUDA
