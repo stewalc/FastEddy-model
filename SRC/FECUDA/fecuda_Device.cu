@@ -13,14 +13,6 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <limits.h>
-#include <float.h>
-#include <fempi.h>
-#include <fecuda.h>
-#include <fecuda_Device_cu.h>
 
 //INCLUDED SOURCE FILES
 #include "fecuda_Utils.cu"
