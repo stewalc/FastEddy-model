@@ -81,6 +81,22 @@ add_library(
     SRC/HYDRO_CORE/CUDA/cuda_largeScaleForcingsDevice.cu
     SRC/HYDRO_CORE/CUDA/cuda_moistureDevice.cu
     SRC/HYDRO_CORE/CUDA/cuda_filtersDevice.cu
+    # ../TIME_INTEGRATION/time_integration.h \
+    # ../TIME_INTEGRATION/CUDA/cuda_timeInt.h \
+    # ../TIME_INTEGRATION/CUDA/cuda_timeIntDevice_cu.h \
+	SRC/HYDRO_CORE/hydro_core.h \
+	SRC/HYDRO_CORE/CUDA/cuda_hydroCore.h \
+	SRC/HYDRO_CORE/CUDA/cuda_hydroCoreDevice_cu.h \
+	# ../GRID/grid.h \
+	# ../GRID/CUDA/cuda_grid.h \
+	# ../GRID/CUDA/cuda_gridDevice_cu.h \
+    # ../FECUDA/fecuda.h \
+    # ../FECUDA/fecuda_Device_cu.h \
+	# ../IO/io.h \
+	# ../MEM_UTILS/mem_utils.h \
+	# ../FEMPI/fempi.h \
+	# ../PARAMETERS/parameters.h \
+	# ../PARAMETERS/hashTable.h
 )
 target_compile_features( cuda_hydroCoreDevice PUBLIC cxx_std_11 )
 set_target_properties( cuda_hydroCoreDevice PROPERTIES CUDA_SEPARABLE_COMPILATION ON )
