@@ -16,8 +16,11 @@
 #ifndef _ADVECTION_CUDADEV_CU_H
 #define _ADVECTION_CUDADEV_CU_H
 #include <hydro_core.h>
+#include <fempi.h>
 #include <cuda_BCsDevice_cu.h>
 #include <cuda_gridDevice_cu.h>
+#include <fecuda_Utils_cu.h>
+
 /*advection_ return codes */
 #define CUDA_ADVECTION_SUCCESS               0
 
