@@ -13,10 +13,7 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-#include <stdio.h>
-#include <fempi.h>
-#include <grid.h>
-#include <fecuda.h>
+
 // #include <fecuda_Device_cu.h>
 #include <fecuda_Utils_cu.h>
 
