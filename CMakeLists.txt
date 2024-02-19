@@ -12,7 +12,7 @@ find_package(CUDAToolkit REQUIRED)
 find_package(MPI REQUIRED)
 # find_package(NetCDF REQUIRED)
 
-set( CC mpicc )
+set( CMAKE_C_COMPILER mpicc )
 
 add_definitions(
     -DCUB_IGNORE_DEPRECATED_CPP_DIALECT 
