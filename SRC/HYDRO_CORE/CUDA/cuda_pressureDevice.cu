@@ -13,6 +13,8 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
+#include <cuda_pressureDevice_cu.h>
+
 /*---PRESSURE_GRADIENT_FORCE*/
 __constant__ int pgfSelector_d;          /*Pressure Gradient Force (pgf) selector: 0=off, 1=on*/
 float *hydroPres_d;            /*Base Adress of memory containing the diagnostic perturbation pressure field */
