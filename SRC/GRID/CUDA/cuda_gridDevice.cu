@@ -13,35 +13,27 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <limits.h>
-#include <float.h>
-#include <math.h>
-#include <fempi.h>
-#include <grid.h>
-#include <fecuda_Device_cu.h>
+
 #include <cuda_gridDevice_cu.h>
 
 /*######################------------------- GRID module variable declarations ---------------------#################*/
 /* Parameters */
-__constant__ int Nh_d;     //Number of halo cells to be used (dependent on largest stencil extent
-__constant__ int Nx_d;     //Computational domain extents in the x, y, and z directions 
-__constant__ int Ny_d;
-__constant__ int Nz_d;
-__constant__ float dX_d; //Computational domain fixed resolutions (i, j, k respectively)
-__constant__ float dY_d;
-__constant__ float dZ_d;
-__constant__ float dXi_d; //Computational domain fixed inverse-resolutions (i, j, k respectively)
-__constant__ float dYi_d;
-__constant__ float dZi_d;
-__constant__ int iMin_d;//Constant min and max bounds of i-index for only non-halos cells of the cuda domain
-__constant__ int iMax_d;
-__constant__ int jMin_d;//Constant min and max bounds of j-index for only non-halos cells of the cuda domain
-__constant__ int jMax_d;
-__constant__ int kMin_d;//Constant min and max bounds of k-index for only non-halos cells of the cuda domain
-__constant__ int kMax_d;
+// __constant__ int Nh_d;     //Number of halo cells to be used (dependent on largest stencil extent
+// __constant__ int Nx_d;     //Computational domain extents in the x, y, and z directions 
+// __constant__ int Ny_d;
+// __constant__ int Nz_d;
+// __constant__ float dX_d; //Computational domain fixed resolutions (i, j, k respectively)
+// __constant__ float dY_d;
+// __constant__ float dZ_d;
+// __constant__ float dXi_d; //Computational domain fixed inverse-resolutions (i, j, k respectively)
+// __constant__ float dYi_d;
+// __constant__ float dZi_d;
+// __constant__ int iMin_d;//Constant min and max bounds of i-index for only non-halos cells of the cuda domain
+// __constant__ int iMax_d;
+// __constant__ int jMin_d;//Constant min and max bounds of j-index for only non-halos cells of the cuda domain
+// __constant__ int jMax_d;
+// __constant__ int kMin_d;//Constant min and max bounds of k-index for only non-halos cells of the cuda domain
+// __constant__ int kMax_d;
 
 /* array fields */
 float *xPos_d;  // Cell-center position in x (meters) 

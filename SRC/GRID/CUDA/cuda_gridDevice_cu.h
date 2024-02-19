@@ -15,7 +15,15 @@
 */
 #ifndef _GRID_CUDADEV_CU_H
 #define _GRID_CUDADEV_CU_H
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include <float.h>
+#include <math.h>
+#include <fempi.h>
+#include <grid.h>
+#include <fecuda_Device_cu.h>
 /*grid_ return codes */
 #define CUDA_GRID_SUCCESS               0
 
