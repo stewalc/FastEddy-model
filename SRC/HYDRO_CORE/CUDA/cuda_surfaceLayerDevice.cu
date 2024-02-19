@@ -13,6 +13,7 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
+#include <cuda_surfaceLayerDevice_cu.h>
 /*---SURFACE LAYER*/
 __constant__ int surflayerSelector_d;    /*Monin-Obukhov surface layer selector: 0= off, 1= on */
 __constant__ float surflayer_z0_d;       /* roughness length (momentum)*/
