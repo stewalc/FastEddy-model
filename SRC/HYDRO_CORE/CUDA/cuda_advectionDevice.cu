@@ -15,9 +15,9 @@
 */
 #include <cuda_advectionDevice_cu.h>
 /*---ADVECTION*/ 
-float *hydroFaceVels_d; //cell face velocities
-__constant__ int advectionSelector_d;          /*advection scheme selector: 0= 1st-order upwind, 2= 3rd-order QUICK, 2= hybrid 3rd-4th order, 3= hybrid 5th-6th order */
-__constant__ float b_hyb_d;                      /*hybrid advection scheme parameter: 0.0= higer-order upwind, 1.0=lower-order cetered, 0.0 < b_hyb < 1.0 = hybrid */
+// float *hydroFaceVels_d; //cell face velocities
+// __constant__ int advectionSelector_d;          /*advection scheme selector: 0= 1st-order upwind, 2= 3rd-order QUICK, 2= hybrid 3rd-4th order, 3= hybrid 5th-6th order */
+// __constant__ float b_hyb_d;                      /*hybrid advection scheme parameter: 0.0= higer-order upwind, 1.0=lower-order cetered, 0.0 < b_hyb < 1.0 = hybrid */
 
 /*#################------------ ADVECTION submodule function definitions ------------------#############*/
 /*----->>>>> int cuda_advectionDeviceSetup();       ---------------------------------------------------------
