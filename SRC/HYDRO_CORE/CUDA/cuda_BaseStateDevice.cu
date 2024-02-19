@@ -29,20 +29,6 @@
 #include <cuda_gridDevice_cu.h>
 #include <cuda_hydroCoreDevice_cu.h>
 
-#include "cuda_advectionDevice.cu" 
-#include "cuda_buoyancyDevice.cu" 
-#include "cuda_coriolisDevice.cu" 
-#include "cuda_pressureDevice.cu" 
-#include "cuda_BCsDevice.cu"
-#include "cuda_rayleighDampingDevice.cu" 
-#include "cuda_surfaceLayerDevice.cu"
-#include "cuda_sgsTurbDevice.cu"
-#include "cuda_molecularDiffDevice.cu" 
-#include "cuda_sgstkeDevice.cu" 
-#include "cuda_largeScaleForcingsDevice.cu" 
-#include "cuda_moistureDevice.cu" 
-#include "cuda_filtersDevice.cu" 
-
 
 /*##############------------------- BASESTATE submodule variable declarations ---------------------#################*/
 /*---BASESTATE*/
