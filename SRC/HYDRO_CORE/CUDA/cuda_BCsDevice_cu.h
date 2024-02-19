@@ -17,6 +17,8 @@
 #define _BCS_CUDADEV_CU_H
 
 #include <hydro_core.h>
+#include <cuda_hydroCore.h>
+#include <cuda_gridDevice_cu.h>
 /*BCs_ return codes */
 #define CUDA_BCS_SUCCESS    0
 
