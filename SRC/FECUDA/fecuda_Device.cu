@@ -21,15 +21,15 @@
 #include <fecuda_Device_cu.h>
 
 /*############------------------- FECUDA module internal function declarations ---------------------#############*/
-dim3 tBlock; //Module Global configuration parameter for threadBlocks
-dim3 grid;   //Module Global Configuration parameters for grids of threadBlocks
+// dim3 tBlock; //Module Global configuration parameter for threadBlocks
+// dim3 grid;   //Module Global Configuration parameters for grids of threadBlocks
 
-__constant__ int mpi_size_world_d;
-__constant__ int mpi_rank_world_d;
-__constant__ int numProcsX_d;
-__constant__ int numProcsY_d;
-__constant__ int rankXid_d;
-__constant__ int rankYid_d;
+// __constant__ int mpi_size_world_d;
+// __constant__ int mpi_rank_world_d;
+// __constant__ int numProcsX_d;
+// __constant__ int numProcsY_d;
+// __constant__ int rankXid_d;
+// __constant__ int rankYid_d;
 
 /*######################------------------- FECUDA module function definitions ---------------------##############*/
 
