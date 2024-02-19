@@ -921,7 +921,7 @@ __global__ void cudaDevice_hydroCoreCalcFaceVelocities(float simTime, int simTim
                                        dt, timeStage, numRKstages, ijk,
                                        &hydroFlds_d[U_INDX*fldStride+ijk], &hydroFlds_d[V_INDX*fldStride+ijk],
                                        &hydroFlds_d[RHO_INDX*fldStride+ijk], &hydroFlds_d[THETA_INDX*fldStride+ijk],
-                                       &cdFld_d[ij], &chFld_d[ij], &fricVel_d[ij], &htFlux_d[ij], &tskin_d[ij],
+                                       &cdFld_d[ij], &chFld_d[ij], &cqFld_d[ij], &fricVel_d[ij], &htFlux_d[ij], &tskin_d[ij],
                                        &z0m_d[ij], &z0t_d[ij], J33_d);
          cudaDevice_SurfaceLayerMOSTdry(ijk, &hydroFlds_d[U_INDX*fldStride+ijk], &hydroFlds_d[V_INDX*fldStride+ijk],
                                         &hydroFlds_d[RHO_INDX*fldStride+ijk], &hydroFlds_d[THETA_INDX*fldStride+ijk],
