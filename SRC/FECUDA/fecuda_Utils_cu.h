@@ -15,6 +15,7 @@
 */
 #ifndef _FECUDA_UTILS_CU_H
 #define _FECUDA_UTILS_CU_H
+#include <fecuda_Device_cu.h>
 /*##############--------- FECUDA Utility (fecuda_Utils.cu) variable declarations -------------#################*/
 extern float *haloSendBuff_d;  //Send-Buffer for coalesced halo exchanges
 extern float *haloRecvBuff_d;  //Recieve-Buffer for coalesced halo exchanges
