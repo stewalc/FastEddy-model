@@ -18,10 +18,11 @@
 #include <grid.h>
 #include <fecuda.h>
 #include <fecuda_Device_cu.h>
+#include <fecuda_Utils_cu.h>
 
 /*##############--------- FECUDA Utility (fecuda_Utils.cu) variable declarations -------------#################*/
-float *haloSendBuff_d;  //Send-Buffer for coalesced halo exchanges
-float *haloRecvBuff_d;  //Recieve-Buffer for coalesced halo exchanges
+// float *haloSendBuff_d;  //Send-Buffer for coalesced halo exchanges
+// float *haloRecvBuff_d;  //Recieve-Buffer for coalesced halo exchanges
 
 /*##########---------- FECUDA Utility (fecuda_Utils.cu) function declarations -----------#################*/
 void createAndStartEvent(cudaEvent_t *startE, cudaEvent_t *stopE){
