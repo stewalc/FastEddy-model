@@ -18,6 +18,9 @@
 #include <hydro_core.h>
 #include <fempi.h>
 #include <grid.h>
+#include <fecuda_Utils_cu.h>
+#include <cuda_gridDevice_cu.h>
+#include <cuda_hydroCoreDevice_cu.h>
 /*pressure_ return codes */
 #define CUDA_PRESSURE_SUCCESS               0
 
