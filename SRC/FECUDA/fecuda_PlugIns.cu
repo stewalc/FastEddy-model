@@ -16,6 +16,18 @@
 //Include cub for the atomic functions
 #include <cub/cub.cuh> 
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include <float.h>
+#include <fempi.h>
+#include <fecuda.h>
+#include <fecuda_Device_cu.h>
+
+//INCLUDED SOURCE FILES
+#include "fecuda_Utils.cu"
+
 /* These constant compile time constants are needed for the cuda_singleRankHorizSlabMeans function*/
 dim3 grid_red;
 dim3 tBlock_red;
