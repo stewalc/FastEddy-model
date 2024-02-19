@@ -13,6 +13,37 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
+
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include <float.h>
+#include <math.h>
+#include <fempi.h>
+#include <grid.h>
+#include <mem_utils.h>
+#include <hydro_core.h>
+#include <fecuda_Device_cu.h>
+#include <cuda_gridDevice_cu.h>
+#include <cuda_hydroCoreDevice_cu.h>
+
+#include "cuda_advectionDevice.cu" 
+#include "cuda_buoyancyDevice.cu" 
+#include "cuda_coriolisDevice.cu" 
+#include "cuda_pressureDevice.cu" 
+#include "cuda_BCsDevice.cu"
+#include "cuda_rayleighDampingDevice.cu" 
+#include "cuda_surfaceLayerDevice.cu"
+#include "cuda_sgsTurbDevice.cu"
+#include "cuda_molecularDiffDevice.cu" 
+#include "cuda_sgstkeDevice.cu" 
+#include "cuda_largeScaleForcingsDevice.cu" 
+#include "cuda_moistureDevice.cu" 
+#include "cuda_filtersDevice.cu" 
+
+
 /*##############------------------- BASESTATE submodule variable declarations ---------------------#################*/
 /*---BASESTATE*/
 float *hydroBaseStateFlds_d;   /*Base Adress of memory containing all prognostic variable fields base-states */
