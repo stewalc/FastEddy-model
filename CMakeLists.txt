@@ -84,9 +84,9 @@ add_library(
     # ../TIME_INTEGRATION/time_integration.h \
     # ../TIME_INTEGRATION/CUDA/cuda_timeInt.h \
     # ../TIME_INTEGRATION/CUDA/cuda_timeIntDevice_cu.h \
-	SRC/HYDRO_CORE/hydro_core.h \
-	SRC/HYDRO_CORE/CUDA/cuda_hydroCore.h \
-	SRC/HYDRO_CORE/CUDA/cuda_hydroCoreDevice_cu.h \
+	SRC/HYDRO_CORE/hydro_core.h
+	SRC/HYDRO_CORE/CUDA/cuda_hydroCore.h
+	SRC/HYDRO_CORE/CUDA/cuda_hydroCoreDevice_cu.h
 	# ../GRID/grid.h \
 	# ../GRID/CUDA/cuda_grid.h \
 	# ../GRID/CUDA/cuda_gridDevice_cu.h \
