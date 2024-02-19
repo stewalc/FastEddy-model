@@ -16,8 +16,10 @@
 #ifndef _IO_NETCDF_H
 #define _IO_NETCDF_H
 #include <netcdf.h>
+#include <string.h>
 #include <io.h>
 #include <ioVarsList.h>
+#include <fempi.h>
 
 /* Handle errors by printing an error message and exiting with a
  * non-zero status. */
