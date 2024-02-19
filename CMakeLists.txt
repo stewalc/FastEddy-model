@@ -46,7 +46,7 @@ include_directories(
 
 add_library(
     io
-    OBJECT
+    STATIC
     SRC/IO/io.c
     SRC/IO/io_netcdf.c
     SRC/IO/io_binary.c
@@ -56,17 +56,17 @@ set_target_properties( io PROPERTIES CUDA_SEPARABLE_COMPILATION ON )
 
 add_library(
     fecuda_Device
-    OBJECT
+    STATIC
     SRC/FECUDA/fecuda_Device.cu
-	# SRC/FECUDA/fecuda_Utils.cu
-	# SRC/FECUDA/fecuda_PlugIns.cu
+	SRC/FECUDA/fecuda_Utils.cu
+	SRC/FECUDA/fecuda_PlugIns.cu
 )
 target_compile_features( fecuda_Device PUBLIC cxx_std_11 )
 set_target_properties( fecuda_Device PROPERTIES CUDA_SEPARABLE_COMPILATION ON )
 
 add_library(
     cuda_hydroCoreDevice
-    OBJECT
+    STATIC
     SRC/HYDRO_CORE/CUDA/cuda_hydroCoreDevice.cu
 	SRC/HYDRO_CORE/CUDA/cuda_BaseStateDevice.cu
 	SRC/HYDRO_CORE/CUDA/cuda_buoyancyDevice.cu
@@ -104,7 +104,7 @@ set_target_properties( cuda_hydroCoreDevice PROPERTIES CUDA_SEPARABLE_COMPILATIO
 
 add_library(
     cuda_timeIntDevice
-    OBJECT
+    STATIC
     SRC/TIME_INTEGRATION/CUDA/cuda_timeIntDevice.cu
     SRC//TIME_INTEGRATION/CUDA/cuda_RKschemes.cu
 )
