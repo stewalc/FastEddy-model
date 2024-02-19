@@ -15,35 +15,35 @@
 */
 #include <cuda_surfaceLayerDevice_cu.h>
 /*---SURFACE LAYER*/
-__constant__ int surflayerSelector_d;    /*Monin-Obukhov surface layer selector: 0= off, 1= on */
-__constant__ float surflayer_z0_d;       /* roughness length (momentum)*/
-__constant__ float surflayer_z0t_d;      /* roughness length (temperature)*/
-__constant__ float surflayer_wth_d;       /* kinematic sensible heat flux at the surface */
-__constant__ float surflayer_tr_d;       /* surface cooling rate K h-1 */
-__constant__ float surflayer_wq_d;       /* kinematic latent heat flux at the surface */
-__constant__ float surflayer_qr_d;       /* surface water vapor rate (g/kg) h-1 */
-__constant__ int surflayer_qskin_input_d;/* selector to use file input (restart) value for qskin under surflayerSelector == 2 */
-__constant__ float temp_grnd_d;       /* initial surface temperature */
-__constant__ float pres_grnd_d;       /* initial surface pressure */
-__constant__ int surflayer_stab_d;    /* exchange coeffcient stability correction selector: 0= on, 1= off */
-float* cdFld_d;            /*Base address for momentum exchange coefficient (2d-array)*/ 
-float* chFld_d;            /*Base address for sensible heat exchange coefficient (2d-array)*/
-float* cqFld_d;            /*Base address for latent heat exchange coefficient (2d-array)*/
-float* fricVel_d;                      /*Base address for friction velocity*/ 
-float* htFlux_d;                       /*Base address for sensible heat flux*/
-float* qFlux_d;                        /*Base address for latent heat flux*/
-float* tskin_d;                        /*Base address for skin temperature*/
-float* qskin_d;                        /*Base address for skin moisture*/
-float* invOblen_d;                     /*Base address for Monin-Obukhov length*/
-float* z0m_d;                          /*Base address for roughness length (momentum)*/
-float* z0t_d;                          /*Base address for roughness length (temperature)*/
-__constant__ int surflayer_idealsine_d;   /*selector for idealized sinusoidal surface heat flux or skin temperature forcing*/
-__constant__ float surflayer_ideal_ts_d;  /*start time in seconds for the idealized sinusoidal surface forcing*/
-__constant__ float surflayer_ideal_te_d;  /*end time in seconds for the idealized sinusoidal surface forcing*/
-__constant__ float surflayer_ideal_amp_d; /*maximum amplitude of the idealized sinusoidal surface forcing*/
-__constant__ float surflayer_ideal_qts_d;  /*start time in seconds for the idealized sinusoidal surface forcing of latent heat flux*/
-__constant__ float surflayer_ideal_qte_d;  /*end time in seconds for the idealized sinusoidal surface forcing of latent heat flux*/
-__constant__ float surflayer_ideal_qamp_d; /*maximum amplitude of the idealized sinusoidal surface forcing of latent heat flux*/
+// __constant__ int surflayerSelector_d;    /*Monin-Obukhov surface layer selector: 0= off, 1= on */
+// __constant__ float surflayer_z0_d;       /* roughness length (momentum)*/
+// __constant__ float surflayer_z0t_d;      /* roughness length (temperature)*/
+// __constant__ float surflayer_wth_d;       /* kinematic sensible heat flux at the surface */
+// __constant__ float surflayer_tr_d;       /* surface cooling rate K h-1 */
+// __constant__ float surflayer_wq_d;       /* kinematic latent heat flux at the surface */
+// __constant__ float surflayer_qr_d;       /* surface water vapor rate (g/kg) h-1 */
+// __constant__ int surflayer_qskin_input_d;/* selector to use file input (restart) value for qskin under surflayerSelector == 2 */
+// __constant__ float temp_grnd_d;       /* initial surface temperature */
+// __constant__ float pres_grnd_d;       /* initial surface pressure */
+// __constant__ int surflayer_stab_d;    /* exchange coeffcient stability correction selector: 0= on, 1= off */
+// float* cdFld_d;            /*Base address for momentum exchange coefficient (2d-array)*/ 
+// float* chFld_d;            /*Base address for sensible heat exchange coefficient (2d-array)*/
+// float* cqFld_d;            /*Base address for latent heat exchange coefficient (2d-array)*/
+// float* fricVel_d;                      /*Base address for friction velocity*/ 
+// float* htFlux_d;                       /*Base address for sensible heat flux*/
+// float* qFlux_d;                        /*Base address for latent heat flux*/
+// float* tskin_d;                        /*Base address for skin temperature*/
+// float* qskin_d;                        /*Base address for skin moisture*/
+// float* invOblen_d;                     /*Base address for Monin-Obukhov length*/
+// float* z0m_d;                          /*Base address for roughness length (momentum)*/
+// float* z0t_d;                          /*Base address for roughness length (temperature)*/
+// __constant__ int surflayer_idealsine_d;   /*selector for idealized sinusoidal surface heat flux or skin temperature forcing*/
+// __constant__ float surflayer_ideal_ts_d;  /*start time in seconds for the idealized sinusoidal surface forcing*/
+// __constant__ float surflayer_ideal_te_d;  /*end time in seconds for the idealized sinusoidal surface forcing*/
+// __constant__ float surflayer_ideal_amp_d; /*maximum amplitude of the idealized sinusoidal surface forcing*/
+// __constant__ float surflayer_ideal_qts_d;  /*start time in seconds for the idealized sinusoidal surface forcing of latent heat flux*/
+// __constant__ float surflayer_ideal_qte_d;  /*end time in seconds for the idealized sinusoidal surface forcing of latent heat flux*/
+// __constant__ float surflayer_ideal_qamp_d; /*maximum amplitude of the idealized sinusoidal surface forcing of latent heat flux*/
 
 /*----->>>>> int cuda_surfaceLayerDeviceSetup();       -------------------------------------------------------------
  * Used to cudaMalloc and cudaMemcpy parameters and coordinate arrays, and for the SURFLAYER HC-Submodule.
