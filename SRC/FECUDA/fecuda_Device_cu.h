@@ -20,6 +20,10 @@
 #define FECUDA_DEV_CU_SUCCESS               0
 
 /*fecuda includes*/
+#include <stdio.h>
+#include <fempi.h>
+#include <grid.h>
+#include <fecuda.h>
 #include <cuda.h>
 #include <cuda_runtime.h>
 
