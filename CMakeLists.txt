@@ -44,7 +44,7 @@ include_directories(
     SRC/PARAMETERS
 )
 
-add_library(
+cuda_add_library(
     io
     SHARED
     SRC/IO/io.c
@@ -54,7 +54,7 @@ add_library(
 target_compile_features( io PUBLIC cxx_std_11 )
 set_target_properties( io PROPERTIES CUDA_SEPARABLE_COMPILATION ON )
 
-add_library(
+cuda_add_library(
     fecuda_Device
     SHARED
     SRC/FECUDA/fecuda_Device.cu
@@ -64,7 +64,7 @@ add_library(
 target_compile_features( fecuda_Device PUBLIC cxx_std_11 )
 set_target_properties( fecuda_Device PROPERTIES CUDA_SEPARABLE_COMPILATION ON )
 
-add_library(
+cuda_add_library(
     cuda_hydroCoreDevice
     SHARED
     SRC/HYDRO_CORE/CUDA/cuda_hydroCoreDevice.cu
@@ -102,7 +102,7 @@ add_library(
 target_compile_features( cuda_hydroCoreDevice PUBLIC cxx_std_11 )
 set_target_properties( cuda_hydroCoreDevice PROPERTIES CUDA_SEPARABLE_COMPILATION ON )
 
-add_library(
+cuda_add_library(
     cuda_timeIntDevice
     SHARED
     SRC/TIME_INTEGRATION/CUDA/cuda_timeIntDevice.cu
