@@ -17,6 +17,7 @@
 #define _IO_NETCDF_H
 #include <netcdf.h>
 #include <string.h>
+#include <stdlib.h>
 #include <io.h>
 #include <ioVarsList.h>
 #include <fempi.h>

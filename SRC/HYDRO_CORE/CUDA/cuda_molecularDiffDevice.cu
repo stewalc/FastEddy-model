@@ -13,6 +13,7 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
+#include <cuda_molecularDiffDevice_cu.h>
 /*---MOLECULAR DIFFUSION*/ 
 /*Parameters*/
 __constant__ int diffusionSelector_d;      /* molecular diffusion selector: 0=off, 1=on */
