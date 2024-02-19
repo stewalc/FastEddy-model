@@ -22,7 +22,7 @@ add_definitions(
 add_compile_options(
   -Wall 
   -m64
-  -arch=sm_70
+#   -arch=sm_70
   -std=c++11
 )
 
