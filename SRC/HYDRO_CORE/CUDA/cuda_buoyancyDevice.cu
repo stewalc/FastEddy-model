@@ -14,6 +14,8 @@
 * limitations under the License.
 */
 
+#include <cuda_buoyancyDevice_cu.h>
+
 /*---BUOYANCY*/
 __constant__ int buoyancySelector_d;          /*buoyancy Force selector: 0=off, 1=on*/
 
