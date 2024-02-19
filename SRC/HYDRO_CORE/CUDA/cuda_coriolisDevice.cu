@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 #include <cuda_coriolisDevice_cu.h>
-
+#include <hydro_core.h>
 /*---CORIOLIS*/ 
 __constant__ int coriolisSelector_d;          /*coriolis Force selector: 0=off, 1=on*/
 __constant__ float corioConstHorz_d;          /*coriolis horizontal term constant */
