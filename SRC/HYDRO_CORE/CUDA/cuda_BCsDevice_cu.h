@@ -16,6 +16,7 @@
 #ifndef _BCS_CUDADEV_CU_H
 #define _BCS_CUDADEV_CU_H
 
+#include <hydro_core.h>
 /*BCs_ return codes */
 #define CUDA_BCS_SUCCESS    0
 

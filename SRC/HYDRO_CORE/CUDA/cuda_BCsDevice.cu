@@ -13,6 +13,7 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
+#include <cuda_BCsDevice_cu.h>
 /*---BOUNDARY CONDITIONS*/
 __constant__ int hydroBCs_d;       // hydro_core BC set selector
 __constant__ float U_g_d;            /*Zonal (West-East) component of the geostrophic wind*/
