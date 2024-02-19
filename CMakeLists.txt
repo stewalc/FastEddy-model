@@ -46,7 +46,7 @@ include_directories(
 
 add_library(
     io
-    STATIC
+    SHARED
     SRC/IO/io.c
     SRC/IO/io_netcdf.c
     SRC/IO/io_binary.c
@@ -56,7 +56,7 @@ set_target_properties( io PROPERTIES CUDA_SEPARABLE_COMPILATION ON )
 
 add_library(
     fecuda_Device
-    STATIC
+    SHARED
     SRC/FECUDA/fecuda_Device.cu
 	SRC/FECUDA/fecuda_Utils.cu
 	SRC/FECUDA/fecuda_PlugIns.cu
@@ -66,7 +66,7 @@ set_target_properties( fecuda_Device PROPERTIES CUDA_SEPARABLE_COMPILATION ON )
 
 add_library(
     cuda_hydroCoreDevice
-    STATIC
+    SHARED
     SRC/HYDRO_CORE/CUDA/cuda_hydroCoreDevice.cu
 	SRC/HYDRO_CORE/CUDA/cuda_BaseStateDevice.cu
 	SRC/HYDRO_CORE/CUDA/cuda_buoyancyDevice.cu
@@ -104,7 +104,7 @@ set_target_properties( cuda_hydroCoreDevice PROPERTIES CUDA_SEPARABLE_COMPILATIO
 
 add_library(
     cuda_timeIntDevice
-    STATIC
+    SHARED
     SRC/TIME_INTEGRATION/CUDA/cuda_timeIntDevice.cu
     SRC//TIME_INTEGRATION/CUDA/cuda_RKschemes.cu
 )
@@ -133,5 +133,5 @@ target_link_libraries( FastEddy io )
 target_link_libraries( FastEddy fecuda_Device )
 target_link_libraries( FastEddy cuda_hydroCoreDevice )
 target_link_libraries( FastEddy ${MPI_C_LIBRARIES} )
-target_link_libraries( FastEddy ${CUDA_RUNTIME_LIBRARY} )
+# target_link_libraries( FastEddy ${CUDA_RUNTIME_LIBRARY} )
 target_link_libraries( FastEddy netcdf )
