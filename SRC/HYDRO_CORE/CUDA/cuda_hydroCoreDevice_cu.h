@@ -15,14 +15,26 @@
 */
 #ifndef _HYDRO_CORE_CUDADEV_CU_H
 #define _HYDRO_CORE_CUDADEV_CU_H
-
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include <float.h>
+#include <math.h>
+#include <fempi.h>
+#include <grid.h>
+#include <mem_utils.h>
+#include <hydro_core.h>
+#include <fecuda_Device_cu.h>
+#include <cuda_gridDevice_cu.h>
 /*hydroCore_ return codes */
 #define CUDA_HYDRO_CORE_SUCCESS               0
 
 /*##############------------------- HYDRO_CORE module variable declarations ---------------------#################*/
 /* Parameters */
 extern __constant__ int Nhydro_d;       // Number of hydro_core prognostic variable fields
-extern __constant__ int hydroBCs_d;       // hydro_core BC set selector
+// extern __constant__ int hydroBCs_d;       // hydro_core BC set selector
 
 /* array fields */
 extern float *hydroFlds_d;     //Base Adress of memory containing all prognostic variable fields under hydro_core
