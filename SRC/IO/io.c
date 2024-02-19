@@ -19,27 +19,27 @@
 
 /*######################------------------- IO module variable definitions ---------------------#################*/
 /* Parameters */
-int ioOutputMode;  /*0: N-to-1 gather and write to a netcdf file, 1:N-to-N writes of FastEddy binary files*/
-char *outPath;     /* Directory Path where output files are to be written */
-char *outFileBase; /* Base name of the output file series as in (outFileBase).element-in-series */
-char *inPath;      /* Directory Path where input files are to be read from */
-char *inFile;      /* Name of the input file */
-int frqOutput;     /*frequency (in timesteps) at which to produce output*/
+// int ioOutputMode;  /*0: N-to-1 gather and write to a netcdf file, 1:N-to-N writes of FastEddy binary files*/
+// char *outPath;     /* Directory Path where output files are to be written */
+// char *outFileBase; /* Base name of the output file series as in (outFileBase).element-in-series */
+// char *inPath;      /* Directory Path where input files are to be read from */
+// char *inFile;      /* Name of the input file */
+// int frqOutput;     /*frequency (in timesteps) at which to produce output*/
 
 /*static Variables*/
-char *outSubString; /*subString portion of outFile holding element-in-series as in path/base.substring */
-char *outFileName;      /*full name instance of outFileName =  path/base.substring */
-char *inFileName;      /*full name instance of inFileName =  path/infile */
+// char *outSubString; /*subString portion of outFile holding element-in-series as in path/base.substring */
+// char *outFileName;      /*full name instance of outFileName =  path/base.substring */
+// char *inFileName;      /*full name instance of inFileName =  path/infile */
 
 /*IO-Buffers*/
-float *ioBuffField;
-float *ioBuffFieldTransposed;
-float *ioBuffFieldRho;
-float *ioBuffFieldTransposed2D;
+// float *ioBuffField;
+// float *ioBuffFieldTransposed;
+// float *ioBuffFieldRho;
+// float *ioBuffFieldTransposed2D;
 
-int nz_varid;
-int ny_varid;
-int nx_varid;
+// int nz_varid;
+// int ny_varid;
+// int nx_varid;
 /*######################------------------- IO module function definitions ---------------------#################*/
 
 /*----->>>>> int ioGetParams();       ----------------------------------------------------------------------
