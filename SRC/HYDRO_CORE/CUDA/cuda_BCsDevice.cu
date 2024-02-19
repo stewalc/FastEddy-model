@@ -15,13 +15,13 @@
 */
 #include <cuda_BCsDevice_cu.h>
 /*---BOUNDARY CONDITIONS*/
-__constant__ int hydroBCs_d;       // hydro_core BC set selector
-__constant__ float U_g_d;            /*Zonal (West-East) component of the geostrophic wind*/
-__constant__ float V_g_d;            /*Meridional (South-North) component of the geostrophic wind*/
-__constant__ float z_Ug_d;
-__constant__ float z_Vg_d;
-__constant__ float Ug_grad_d;
-__constant__ float Vg_grad_d;
+// __constant__ int hydroBCs_d;       // hydro_core BC set selector
+// __constant__ float U_g_d;            /*Zonal (West-East) component of the geostrophic wind*/
+// __constant__ float V_g_d;            /*Meridional (South-North) component of the geostrophic wind*/
+// __constant__ float z_Ug_d;
+// __constant__ float z_Vg_d;
+// __constant__ float Ug_grad_d;
+// __constant__ float Vg_grad_d;
 
 
 /*#################------------ BCS submodule function definitions ------------------#############*/
