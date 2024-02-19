@@ -13,15 +13,9 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <limits.h>
-#include <float.h>
-#include <fempi.h>
-#include <parameters.h>
-#include <ioVarsList.h>
+
 #include <io.h>
+
 
 #define MAXLEN 256
 int dimids[MAXDIMS];
@@ -195,11 +189,6 @@ int ioAllocateBuffers(int globalNx, int globalNy, int globalNz){
    return(errorCode);
 } //end ioAllocateBuffers()
 
-// Include the netCDF-centric source code
-#include <io_netcdf.c>
-
-// Include the unformatted N-to-N binary-centric source code
-#include <io_binary.c>
 
 /*----->>>>> int ioCleanup();       ----------------------------------------------------------------------
 Used to free all malloced memory by the IO module.

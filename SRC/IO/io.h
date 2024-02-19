@@ -22,7 +22,14 @@
 #define MAXDIMS     16   //used for static allocation of dimids length. Could be made dynamic.
 
 #define IO_ERROR_DIMLEN          200
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include <float.h>
+#include <fempi.h>
+#include <parameters.h>
+#include <ioVarsList.h>
 /*io includes*/
 #include <io_netcdf.h>
 #include <io_binary.h>
