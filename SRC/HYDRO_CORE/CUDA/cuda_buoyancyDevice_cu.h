@@ -15,7 +15,8 @@
 */
 #ifndef _BUOYANCY_CUDADEV_CU_H
 #define _BUOYANCY_CUDADEV_CU_H
-
+#include <cuda_hydroCoreDevice_cu.h>
+#include <hydro_core.h>
 /*buoyancy return codes */
 #define CUDA_BUOYANCY_SUCCESS    0
 

@@ -15,11 +15,9 @@
 */
 
 #include <cuda_buoyancyDevice_cu.h>
-#include <cuda_hydroCoreDevice_cu.h>
-#include <hydro_core.h>
 
 /*---BUOYANCY*/
-__constant__ int buoyancySelector_d;          /*buoyancy Force selector: 0=off, 1=on*/
+// __constant__ int buoyancySelector_d;          /*buoyancy Force selector: 0=off, 1=on*/
 
 /*#################------------ BUOYANCY submodule function definitions ------------------#############*/
 /*----->>>>> int cuda_buoyancyDeviceSetup();       ---------------------------------------------------------
