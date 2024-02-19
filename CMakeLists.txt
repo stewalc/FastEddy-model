@@ -12,7 +12,7 @@ find_package(CUDAToolkit REQUIRED)
 find_package(MPI REQUIRED)
 # find_package(NetCDF REQUIRED)
 
-set( CMAKE_C_COMPILER mpicc )
+set( CMAKE_C_COMPILER /usr/bin/mpicc )
 
 add_definitions(
     -DCUB_IGNORE_DEPRECATED_CPP_DIALECT 
@@ -24,7 +24,7 @@ add_compile_options(
   -Wall 
   -m64
 #   -arch=sm_70
-  -std=c++11
+#   -std=c++11
 )
 include_directories(SYSTEM ${MPI_INCLUDE_PATH})
 
