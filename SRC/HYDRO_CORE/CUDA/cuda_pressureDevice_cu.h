@@ -16,6 +16,7 @@
 #ifndef _PRESSURE_CUDADEV_CU_H
 #define _PRESSURE_CUDADEV_CU_H
 #include <hydro_core.h>
+#include <fempi.h>
 /*pressure_ return codes */
 #define CUDA_PRESSURE_SUCCESS               0
 
